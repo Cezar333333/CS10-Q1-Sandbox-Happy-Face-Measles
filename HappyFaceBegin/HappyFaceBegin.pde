@@ -24,7 +24,7 @@ void setup() {
 }//End setup
 
 void draw() {
-  measlesX = random(width);
+  measlesX = random(width*1/2-height*1/2, width*1/2+height*1/2);
   measlesY = random(height);
   measlesDiameter = random(height*1/70, height*1/40);
   fill(measlesColor);
