@@ -12,18 +12,18 @@ color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
 
 void setup() {
-  size (900, 600);
+  size (700, 500);
   //fullScreen();
   println("Screen Width is", displayWidth, "Screen Height is", displayHeight);
   //
   population();
   //
   //faceDraw();
+  background(0);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
 }//End setup
 
 void draw() {
-  
   measlesX = random(width);
   measlesY = random(height);
   measlesDiameter = random(height*1/70, height*1/40);
