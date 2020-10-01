@@ -22,4 +22,6 @@ void keyPressed() {
 }//End keypressed
 
 void mousePressed() {
+  if( mouseX>width*1/4 && mouseX<width*3/4 && mouseY>height*1/4 && mouseY<height*3/4) {
+  }//End IF, using mouseX & mouseY
 }//End mousePressed
