@@ -18,7 +18,6 @@ void setup() {
   //
   population();
   //
-  //faceDraw();
   background(0);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
 }//End setup
