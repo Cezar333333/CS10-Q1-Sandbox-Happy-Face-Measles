@@ -10,6 +10,8 @@ color measlesColor = red;
 color white = 255;
 color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
+int buttonX, buttonY, buttonWidth, buttonHeight;
+color buttonColour, yellow, purple;
 
 void setup() {
   size (700, 500);
@@ -47,4 +49,7 @@ void keyPressed() {
 }//End keypressed
 
 void mousePressed() {
+  if ( mouseX>buttonX && mouseX<width && mouseY>buttonY && mouseY<buttonHeight ) {
+    exit();
+  }//End IF, using mouseX & mouseY
 }//End mousePressed
