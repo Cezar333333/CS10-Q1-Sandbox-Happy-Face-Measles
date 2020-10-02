@@ -9,8 +9,8 @@ void setup() {
   buttonY = height*1/4;
   buttonWidth = width*1/2;
   buttonHeight = height*1/2;
-  yellow = ;
-  purple = ;
+  yellow = #F3FC03;
+  purple = #FC03FC;
 }//End setup
 
 void draw() {
