@@ -26,6 +26,15 @@ void setup() {
 }//End setup
 
 void draw() {
+  //
+  if (mouseX>buttonX && mouseX<width && mouseY>buttonY && mouseY<buttonHeight) { //Button Hoverover
+    buttonColour = yellow; //Hoverover
+  } else {
+    buttonColour = purple;
+  }// End IF
+  fill(buttonColour); //Purple all the time, Yellow with Hoverover
+  rect(buttonX, buttonY, buttonWidth, buttonHeight);
+  //
   measlesX = random(width*1/2-height*1/2, width*1/2+height*1/2);
   measlesY = random(height);
   measlesDiameter = random(height*1/70, height*1/40);
