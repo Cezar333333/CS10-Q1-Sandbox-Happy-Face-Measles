@@ -12,11 +12,18 @@ color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
 int buttonX, buttonY, buttonWidth, buttonHeight;
 color buttonColour, yellow, purple;
+String quit = "X";
+PFont titleFont;
+color quitButtonPurple = #2C08FF;
+color quitButtonColor = quitButtonPurple;
 
 void setup() {
   size (700, 500);
   //fullScreen();
   println("Screen Width is", displayWidth, "Screen Height is", displayHeight);
+  //String[] fontList = PFont.list(); //To list fonts available on OS
+  //println("Start of Console");
+  //printArray(fontList);
   //
   population();
   //
@@ -34,6 +41,12 @@ void draw() {
   }// End IF
   fill(buttonColour); //Purple all the time, Yellow with Hoverover
   rect(buttonX, buttonY, buttonWidth, buttonHeight);
+  fill(quitButtonColor);
+  textAlign(CENTER, CENTER); //Aligns the X&Y
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+  textFont(titleFont, width*1/35);
+  text(quit, buttonX, buttonY, buttonWidth, buttonHeight);
+  fill(255); //Reset
   //
   measlesX = random(width*1/2-height*1/2, width*1/2+height*1/2);
   measlesY = random(height);

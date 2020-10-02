@@ -26,4 +26,5 @@ void population() {
   buttonHeight = height*1/14;
   yellow = #F3FC03;
   purple = #FC03FC;
+  titleFont = createFont ("Harrington", 55); //Font size 55
 }//End population
