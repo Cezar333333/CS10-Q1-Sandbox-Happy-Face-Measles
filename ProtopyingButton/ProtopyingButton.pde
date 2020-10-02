@@ -20,7 +20,7 @@ void draw() {
   } else {
     buttonColour = purple;
   }// End IF
-  //fill(); //Purple all the time, Yellow with Hoverover
+  fill(buttonColour); //Purple all the time, Yellow with Hoverover
   rect(buttonX, buttonY, buttonWidth, buttonHeight);
 }//End draw
 
