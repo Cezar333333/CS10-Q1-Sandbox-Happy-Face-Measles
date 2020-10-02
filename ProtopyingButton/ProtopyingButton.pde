@@ -1,5 +1,6 @@
 //Global Variables
 int buttonX, buttonY, buttonWidth, buttonHeight;
+color buttonColour, yellow, purple;
 
 void setup() {
   size(400, 300);
@@ -8,6 +9,8 @@ void setup() {
   buttonY = height*1/4;
   buttonWidth = width*1/2;
   buttonHeight = height*1/2;
+  yellow = ;
+  purple = ;
 }//End setup
 
 void draw() {
