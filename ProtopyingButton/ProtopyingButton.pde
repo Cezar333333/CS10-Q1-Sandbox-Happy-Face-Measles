@@ -11,6 +11,13 @@ void setup() {
 }//End setup
 
 void draw() {
+
+  if (mouseX>width*1/4 && mouseX<width*3/4 && mouseY>height*1/4 && mouseY<height*3/4) { //Button Hoverover
+    buttonColour = yellow; //Hoverover
+  } else {
+    buttonColour = purple;
+  }// End IF
+  //fill(); //Purple all the time, Yellow with Hoverover
   rect(buttonX, buttonY, buttonWidth, buttonHeight);
 }//End draw
 
@@ -22,7 +29,7 @@ void keyPressed() {
 }//End keypressed
 
 void mousePressed() {
-  if ( mouseX>width*1/4 && mouseX<width*3/4 && mouseY>height*1/4 && mouseY<height*3/4) {
+  if ( mouseX>width*1/4 && mouseX<width*3/4 && mouseY>height*1/4 && mouseY<height*3/4 ) {
     exit();
   }//End IF, using mouseX & mouseY
 }//End mousePressed
