@@ -27,4 +27,11 @@ void population() {
   yellow = #F3FC03;
   purple = #FC03FC;
   titleFont = createFont ("Harrington", 55); //Font size 55
+  arcA = leftEyeX ;
+  arcB = height*6/8 ;
+  arcC = rightEyeX;
+  arcD = height*7/8;
+  //arcStart = ;
+  //arcStop = ;
+  
 }//End population

@@ -1,6 +1,7 @@
 //Global Variables
 int reset;
 int faceX, faceY, faceDiameter;
+int arcA, arcB, arcC, arcD, arcStart, arcStop;
 int leftEyeX, leftEyeY, leftEyeDiameter;
 int rightEyeX, rightEyeY, rightEyeDiameter;
 int noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
@@ -16,6 +17,7 @@ String quit = "X";
 PFont titleFont;
 color quitButtonPurple = #2C08FF;
 color quitButtonColor = quitButtonPurple;
+
 
 void setup() {
   size (700, 500);
@@ -60,6 +62,7 @@ void draw() {
   triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
   strokeWeight(mouthThick);
   line(mouthX1, mouthY1, mouthX2, mouthY2);
+  arc(arcA, arcB, arcC, arcD, PI+QUARTER_PI, CHORD);
   strokeWeight(reset);
 }//End draw
 
