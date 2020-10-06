@@ -1,13 +1,12 @@
 //Global Variables
 int reset;
 int faceX, faceY, faceDiameter;
-int arcA, arcB, arcC, arcD, arcStart, arcStop;
 int leftEyeX, leftEyeY, leftEyeDiameter;
 int rightEyeX, rightEyeY, rightEyeDiameter;
 int noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2, mouthThick;
-color red = #FF0303;
-color measlesColor = red;
+color pink = #F07979;
+color measlesColor = pink;
 color white = 255;
 color colorReset = white;
 float measlesX, measlesY, measlesDiameter;
@@ -17,10 +16,15 @@ String quit = "X";
 PFont titleFont;
 color quitButtonPurple = #2C08FF;
 color quitButtonColor = quitButtonPurple;
+int angle ;
+int coverX, coverY, coverDiameter, coverThick ;
 
 
 void setup() {
-  size (700, 500);
+  size(640, 360);
+  background(102);
+  fill(0, 102);
+  
   //fullScreen();
   println("Screen Width is", displayWidth, "Screen Height is", displayHeight);
   //String[] fontList = PFont.list(); //To list fonts available on OS
@@ -30,11 +34,12 @@ void setup() {
   population();
   //
   //faceDraw();
-  background(0);
+  background(250);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
 }//End setup
 
 void draw() {
+  
   //
   if (mouseX>buttonX && mouseX<width && mouseY>buttonY && mouseY<buttonHeight) { //Button Hoverover
     buttonColour = yellow; //Hoverover
@@ -59,12 +64,50 @@ void draw() {
   fill(colorReset);
   ellipse(leftEyeX, leftEyeY, leftEyeDiameter, leftEyeDiameter);
   ellipse(rightEyeX, rightEyeY, rightEyeDiameter, rightEyeDiameter);
-  triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
+  fill(250);
   strokeWeight(mouthThick);
   line(mouthX1, mouthY1, mouthX2, mouthY2);
-  arc(arcA, arcB, arcC, arcD, PI+QUARTER_PI, CHORD);
   strokeWeight(reset);
+  noFill();
+  ellipseMode(RADIUS);  // Set ellipseMode to RADIUS
+fill(#FF039A);  // Set fill to white
+ellipse(leftEyeX, leftEyeY, leftEyeDiameter, leftEyeDiameter);  // Draw white ellipse using RADIUS mode
+
+ellipseMode(CENTER);  // Set ellipseMode to CENTER
+fill(#da6af7);  // Set fill to gray
+ellipse(leftEyeX, leftEyeY, leftEyeDiameter, leftEyeDiameter);  // Draw gray ellipse using CENTER mode
+
+ellipseMode(RADIUS);  // Set ellipseMode to RADIUS
+fill(#F8FC2B);  // Set fill to white
+ellipse(rightEyeX, rightEyeY, rightEyeDiameter, rightEyeDiameter);  // Draw white ellipse using RADIUS mode
+
+ellipseMode(CENTER);  // Set ellipseMode to CENTER
+fill(#6df76d);  // Set fill to gray
+ellipse(rightEyeX, rightEyeY, rightEyeDiameter, rightEyeDiameter);  // Draw gray ellipse using CENTER mode
+fill(#8fc7ff);
+triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
+noFill() ;
+ strokeWeight(coverThick) ;
+ellipse(coverX, coverY, coverDiameter, coverDiameter) ;
+strokeWeight(reset) ;
+// Draw only when mouse is pressed
+  if (mousePressed == true) {
+    angle += 5;
+    float val = cos(radians(angle)) * 12.0;
+    for (int a = 0; a < 360; a += 75) {
+      float xoff = cos(radians(a)) * val;
+      float yoff = sin(radians(a)) * val;
+      fill(0);
+      ellipse(mouseX + xoff, mouseY + yoff, val, val);
+    }
+    fill(255);
+    ellipse(mouseX, mouseY, 2, 2);
+  }
+
+
 }//End draw
+
+
 
 void keyPressed() {
   //Quit Keyboard Button

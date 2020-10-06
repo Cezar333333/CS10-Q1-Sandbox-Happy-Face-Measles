@@ -4,7 +4,7 @@ void population() {
   faceDiameter = height;
   leftEyeX = width*3/8;
   leftEyeY = height*1/4;
-  leftEyeDiameter = height/7;
+  leftEyeDiameter = height/12;
   rightEyeX = width*5/8;
   rightEyeY = leftEyeY;
   rightEyeDiameter = leftEyeDiameter;
@@ -26,12 +26,9 @@ void population() {
   buttonHeight = height*1/14;
   yellow = #F3FC03;
   purple = #FC03FC;
-  titleFont = createFont ("Harrington", 55); //Font size 55
-  arcA = leftEyeX ;
-  arcB = height*6/8 ;
-  arcC = rightEyeX;
-  arcD = height*7/8;
-  //arcStart = ;
-  //arcStop = ;
-  
+  titleFont = createFont ("Harrington", 55); //Font size
+  coverX=width/2;
+  coverY=height/2 ;
+  coverDiameter=height*15/27;
+  coverThick=500;
 }//End population
