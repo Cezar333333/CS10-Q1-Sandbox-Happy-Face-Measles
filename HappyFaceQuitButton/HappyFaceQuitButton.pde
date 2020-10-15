@@ -21,7 +21,7 @@ int coverX, coverY, coverDiameter, coverThick ;
 
 
 void setup() {
-  size(640, 360);
+  size(1000, 700);
   background(102);
   fill(0, 102);
   
@@ -104,7 +104,19 @@ strokeWeight(reset) ;
     ellipse(mouseX, mouseY, 2, 2);
   }
 
-
+if (mouseX>buttonX && mouseX<width && mouseY>buttonY && mouseY<buttonHeight) { //Button Hoverover
+    buttonColour = yellow; //Hoverover
+  } else {
+    buttonColour = purple;
+  }// End IF
+  fill(buttonColour); //Purple all the time, Yellow with Hoverover
+  rect(buttonX, buttonY, buttonWidth, buttonHeight);
+  fill(quitButtonColor);
+  textAlign(CENTER, CENTER); //Aligns the X&Y
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+  textFont(titleFont, width*1/35);
+  text(quit, buttonX, buttonY, buttonWidth, buttonHeight);
+  fill(255); //Reset
 }//End draw
 
 

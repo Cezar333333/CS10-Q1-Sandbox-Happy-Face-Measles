@@ -29,6 +29,6 @@ void population() {
   titleFont = createFont ("Harrington", 55); //Font size
   coverX=width/2;
   coverY=height/2 ;
-  coverDiameter=height*15/27;
-  coverThick=500;
+  coverDiameter=height*22/32;
+  coverThick=1150;
 }//End population
