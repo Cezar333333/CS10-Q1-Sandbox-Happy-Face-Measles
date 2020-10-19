@@ -219,7 +219,7 @@ void draw() {
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: LEFT | CENTER | RIGHT & TOP | CENTER | BOTTOM | BASELINE
   textFont(titleFont, 29); //Change the number until it fits, largest font size
-  text(title, width*15/16, height*0/16, width*1/16, height*1/16);
+  text(title, width*0/16, height*7.4/16, width*1/16, height*1/16);
   fill(255); //Reset to white for rest of the program
   
   fill(black); //Reset all IF-ELSE
@@ -331,15 +331,7 @@ if ( mouseX>=button7X && mouseX<=button6X+button7Width && mouseY>=button7Y && mo
 }
 if ( mouseX>=button8X && mouseX<=button8X+button8Width && mouseY>=button8Y && mouseY<=button8Y+button8Height) {
     println("Btn 8 activated");
-    turnOnOrange= true;
-    turnOnBlue = false;
-    turnOnPink = false;
-    turnOnBrown = false;
-    turnOnGreen = false;
-    turnOnYellow= false;
-    turnOnPurple= false;
-    turnOnGrey= false;
-    turnOnImage= false;
+  exit();
 }
 if ( mouseX>=button9X && mouseX<=button9X+button9Width && mouseY>=button9Y && mouseY<=button9Y+button9Height) {
     println("Btn 9 activated");
