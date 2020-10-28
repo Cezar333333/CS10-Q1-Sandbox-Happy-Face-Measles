@@ -1,7 +1,7 @@
-color purple = #FF03F3;
-color yellow = #FFF703;
-color regularButton = purple;
-color hoverOverButton = yellow;
+color purple2 = #FF03F3;
+color yellow2 = #FFF703;
+color regularButton = purple2;
+color hoverOverButton = yellow2;
 String title= "Quit";
 PFont titleFont;
 
