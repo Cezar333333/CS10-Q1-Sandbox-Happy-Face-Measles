@@ -14,7 +14,13 @@ float rect8X, rect8Y, rect8Width, rect8Height;
 float rect9X, rect9Y, rect9Width, rect9Height; 
 float rect10X, rect10Y, rect10Width, rect10Height; 
 float rect11X, rect11Y, rect11Width, rect11Height; 
-float circleX, circleY, circleWidth, circleHeight;
+float rect12X, rect12Y, rect12Width, rect12Height; 
+float ellipseX, ellipseY, ellipseWidth, ellipseHeight;
+float ellipse2X, ellipse2Y, ellipse2Width, ellipse2Height;
+float ellipse3X, ellipse3Y, ellipse3Width, ellipse3Height;
+float ellipse4X, ellipse4Y, ellipse4Width, ellipse4Height;
+float ellipse5X, ellipse5Y, ellipse5Width, ellipse5Height;
+float ellipse6X, ellipse6Y, ellipse6Width, ellipse6Height;
 color red=#FF002F;
 color orange=#FF8400;
 color yellow=#FFF300;
@@ -22,18 +28,18 @@ color green=#2DFF00;
 color blue=#001BFF;
 color purple=#A900FF;
 color black2=#000000;
-color white=1;
+color white=#ffffff;
 String title1= "Color";
 String title2= "Brush!";
 String title3= "Images!";
 
 void setup() {
-  size(1000, 900);
+  size(1200, 1000);
   quitButtonSetup();
-  drawingSurfaceX = width*9/32;
-  drawingSurfaceY = height*5/30;
-  drawingSurfaceWidth = width*22/32;
-  drawingSurfaceHeight = height*25/32;
+  drawingSurfaceX = width*8.5/32;
+  drawingSurfaceY = height*4.5/30;
+  drawingSurfaceWidth = width*23/32;
+  drawingSurfaceHeight = height*21/32;
   
   
   println("Start of Console");
@@ -98,10 +104,46 @@ titleFont = createFont ("Harrington", 55); //Must also Tools / Create Font / Fin
   rect10Width= width*1/7;
   rect10Height= height*1/16;
   
-  rect11X= width*10/33;
-  rect11Y= height*.9/30;
-  rect11Width= width*20/32;
+  rect11X= width*9.25/33;
+  rect11Y= height*.4/30;
+  rect11Width= width*21/32;
   rect11Height= height*2/16;
+  
+  rect12X= width*9.25/33;
+  rect12Y= height*25/30;
+  rect12Width= width*22/32;
+  rect12Height= height*2.5/16;
+  
+  ellipseX= width*16/30;
+  ellipseY= height*2.5/32;
+  ellipseWidth= width*1/32;
+  ellipseHeight= height*1/30;
+  
+  ellipse2X= width*18/30;
+  ellipse2Y= height*2.5/32;
+  ellipse2Width= width*1.5/32;
+  ellipse2Height= height*1.5/30;
+  
+  ellipse3X= width*20.5/30;
+  ellipse3Y= height*2.5/32;
+  ellipse3Width= width*2/32;
+  ellipse3Height= height*2/30;
+  
+  ellipse4X= width*23.5/30;
+  ellipse4Y= height*2.5/32;
+  ellipse4Width= width*2.5/32;
+  ellipse4Height= height*2.5/30;
+  
+  ellipse5X= width*26.6/30;
+  ellipse5Y= height*2.5/32;
+  ellipse5Width= width*3/32;
+  ellipse5Height= height*3/30;
+  
+  ellipse6X= width*14.5/30;
+  ellipse6Y= height*2.5/32;
+  ellipse6Width= width*0.5/32;
+  ellipse6Height= height*0.5/30;
+  
   
     
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
@@ -125,8 +167,13 @@ titleFont = createFont ("Harrington", 55); //Must also Tools / Create Font / Fin
   rect(rect10X, rect10Y, rect10Width, rect10Height);
   fill(white);
   rect(rect11X, rect11Y, rect11Width, rect11Height);
-  circle(53, 46, 55);
-  
+  rect(rect12X, rect12Y, rect12Width, rect12Height);
+  ellipse(ellipseX, ellipseY, ellipseWidth, ellipseHeight);
+  ellipse(ellipse2X, ellipse2Y, ellipse2Width, ellipse2Height);
+  ellipse(ellipse3X, ellipse3Y, ellipse3Width, ellipse3Height);
+  ellipse(ellipse4X, ellipse4Y, ellipse4Width, ellipse4Height);
+  ellipse(ellipse5X, ellipse5Y, ellipse5Width, ellipse5Height);
+  ellipse(ellipse6X, ellipse6Y, ellipse6Width, ellipse6Height);
 }
 
 void draw() {
@@ -136,6 +183,7 @@ void draw() {
     fill(ink);
     ellipse(mouseX, mouseY, drawingDiameter, drawingDiameter);
   }
+  fill(white);
   rect(width*0, height*0, width*8/32, height*3/32);
 fill(purple); //Ink, hexidecimal copied from Color Selector
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
@@ -149,7 +197,7 @@ fill(purple); //Ink, hexidecimal copied from Color Selector
 textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 textFont(titleFont, 50); //Change the number until it fits, largest font size
-text(title2, width*10/32, height*1/46, width*6/32, height*4/30);
+text(title2, width*9/32, height*0.2/46, width*6/32, height*4/30);
 fill(255); //Reset to white for rest of the program
 
 
